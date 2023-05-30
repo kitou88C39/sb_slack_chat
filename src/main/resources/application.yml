@@ -1,0 +1,17 @@
+//WEBコンテナ(server)の設定する
+server:
+  port: 8080
+  servlet:
+    context-path: /chat-backend
+//DB接続の設定する
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MySQL
+    username: sa
+    password:
+//MyBatisの設定する
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
